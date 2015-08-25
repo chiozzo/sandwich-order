@@ -11,6 +11,8 @@ var sandwich = (function(sandwich){
 	return {
 		sandwich.addMeat = function (ingredient) {
 			console.log("add meat run");
+			//get value of meat drop down
+			//append text of corresponding value to "orderslip" div
 		}
 	}
 

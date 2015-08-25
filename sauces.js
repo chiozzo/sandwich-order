@@ -9,6 +9,8 @@ var sandwich = (function(sandwich){
 	return {
 		sandwich.addSauce = function(ingredient) {
 			console.log("add sauce run");
+			//get value of sauce drop down
+			//append text of corresponding value to "orderslip" div
 		}
 	}
 
