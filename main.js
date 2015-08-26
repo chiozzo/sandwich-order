@@ -1,9 +1,3 @@
-// var sandwich = (function() {
-
-
-// })();
-
-
 var breads = [
       { val : "none", text : "None"},
       { val : "white", text : "White"},
@@ -78,6 +72,11 @@ menuSauce.append("<option selected disabled>Choose Your Sauces</option>");
 $(sauces).each(function() {
   menuSauce.append($("<option>").attr('value',this.val).text(this.text));
 });
+
+var sandwich = (function() {
+
+
+})();
 
 
 
