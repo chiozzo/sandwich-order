@@ -1,16 +1,26 @@
-var breads = [
-  { val : "none", text : "None"},
-  { val : "white", text : "White"},
-  { val : "wheat", text : "Wheat"},
-  { val : "rye", text : "Rye"},
-  { val : "french", text : "French"}
-  ];
-// var meats = ["Ham", "Turkey", "Salami", "Bacon", "Pepperoni", "Grilled Chicken"];
-// var cheeses = ["Cheddar", "Swiss", "American", "Provolone", "Muenster"];
-// var veggies = [];
+var sandwich = (function(){
 
-var sel = $('<select>').appendTo('body');
-sel.append("<option selected disabled>Choose Your Bread</option>");
-$(breads).each(function() {
- sel.append($("<option>").attr('value',this.val).text(this.text));
-});
+	return {
+		arrayToDropdown: function(ingredientsArray){
+			var selections = $('#ingredient-selections');
+			var selectMenu = "<select>";
+			selectMenu += "<option selected>None</option>";
+			ingredientsArray.forEach(function(ingredient){
+				this.attr('value',this.val);
+				this.text(this.text);
+				selectMenu += "<option ";
+				selectMenu += "value='";
+				selectMenu += ingredient;
+				selectMenu += "'>"
+				selectMenu += ingredient;
+				selectMenu += "</option>"
+				console.log(selectMenu);
+			});
+		selectMenu += "</select>";
+		selections.append(selectMenu);
+		}
+	}
+})();
+
+var breadsArray = sandwich.getBread();
+console.log(breadsArray);

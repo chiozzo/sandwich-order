@@ -1,4 +1,4 @@
-var sandwich = (function(){
+var sandwich = (function(sandwich){
 	var breads = {
 		"white": "0.50",
 		"wheat": "0.50",
@@ -10,20 +10,16 @@ var sandwich = (function(){
 		"sourdough": "0.50"
 	};
 
-	return {
-	getBread: function() {
+	sandwich.getBread = function() {
 		console.log("get bread run");
 		var breadsArray = Object.keys(breads);
 		return breadsArray;
-	},
-	addBread: function(ingredient) {
+	};
+	sandwich.addBread = function(ingredient) {
 		return "add bread run";
 		//get value of bread drop down
-		//append text of corresponding value to "orderslip" div
+		//append text of corresponding value to "created-order" div
 		}
-	};
+	return sandwich;
 
-})();
-
-var breadsArray = sandwich.getBread();
-console.log(breadsArray);
+})(sandwich);

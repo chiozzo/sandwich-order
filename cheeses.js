@@ -6,14 +6,12 @@ var sandwich = (function(sandwich){
 		"american": "1.00",
 		"swiss": "1.00",
 		"pepperjack": "1.00"
-	}
+	};
 
-	return {
-		sandwich.addCheese = function(ingredient) {
-			console.log("add cheese run");
-			//get value of cheese drop down
-			//append text of corresponding value to "orderslip" div
-		}
+	sandwich.addCheese = function(ingredient) {
+		console.log("add cheese run");
+		//get value of cheese drop down
+		//append text of corresponding value to "orderslip" div
 	}
 
 	return sandwich;
