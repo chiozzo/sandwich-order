@@ -16,8 +16,10 @@ var breads = [
 // var cheeses = ["Cheddar", "Swiss", "American", "Provolone", "Muenster"];
 // var veggies = [];
 
-var sel = $('<select>').appendTo('#ingredients');
-sel.append("<option selected disabled>Choose Your Bread</option>");
+var $sel = $('<select>').appendTo('#ingredients');
+
+$sel.append("<option selected disabled>Choose Your Bread</option>");
+
 $(breads).each(function() {
- sel.append($("<option>").attr('value',this.val).text(this.text));
+  $sel.append($("<option>").attr('value',this.val).text(this.text));
 });
