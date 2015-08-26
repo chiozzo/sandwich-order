@@ -22,3 +22,7 @@ var sandwich = (function(sandwich){
 	return sandwich;
 
 })(sandwich);
+
+
+
+menuBread.append($("<option>").attr('price',this.price).attr('value',this.val).text(this.text));
