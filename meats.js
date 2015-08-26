@@ -1,20 +1,23 @@
 var sandwich = (function(sandwich){
 	var meats = {
-		"ham": "2.00",
-		"turkey": "2.00",
-		"chicken": "2.00",
-		"meatballs": "2.00",
-		"salami": "2.00",
-		"bacon": "2.00"
-	}
+		"Ham": "2.00",
+		"Turkey": "2.00",
+		"Chicken": "2.00",
+		"Meatballs": "2.00",
+		"Salami": "2.00",
+		"Bacon": "2.00"
+	};
 
-	return {
-		sandwich.addMeat = function (ingredient) {
-			console.log("add meat run");
-			//get value of meat drop down
-			//append text of corresponding value to "orderslip" div
-		}
-	}
+	sandwich.getMeats = function() {
+		console.log("getMeats run");
+		return Object.keys(meats);
+	};
+
+	sandwich.addMeat = function (ingredient) {
+		return "addMeat run";
+		//get value of meat drop down
+		//append text of corresponding value to "orderslip" div
+	};
 
 	return sandwich;
 

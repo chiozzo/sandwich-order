@@ -1,19 +1,26 @@
 var sandwich = (function(sandwich){
 	var breads = {
-		"white": "0.50",
-		"wheat": "0.50",
-		"whole grain": "0.50",
-		"cheddar bread": "0.50",
-		"italian herb": "0.50"
-	}
+		"White": "0.50",
+		"Wheat": "0.50",
+		"Whole Grain": "0.50",
+		"Cheddar": "0.50",
+		"Italian Herb": "0.50",
+		"Rye": "0.50",
+		"French": "0.50",
+		"Sourdough": "0.50"
+	};
 
-	return {
-		sandwich.addBread = function(ingredient) {
-			console.log("add bread run");
-			//get value of bread drop down
-			//append text of corresponding value to "orderslip" div
-		}
-	}
+	sandwich.getBreads = function() {
+		console.log("getBreads run");
+		return Object.keys(breads);
+	};
+
+	sandwich.addBread = function(ingredient) {
+		return "addBread run";
+
+		//get value of bread drop down
+		//append text of corresponding value to "created-order" div
+	};
 
 	return sandwich;
 

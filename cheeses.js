@@ -1,21 +1,28 @@
 var sandwich = (function(sandwich){
 	var cheeses = {
-		"muenster": "1.00",
-		"cheddar": "1.00",
-		"provolone": "1.00",
-		"american": "1.00",
-		"swiss": "1.00",
-		"pepperjack": "1.00"
-	}
+		"Muenster": "1.00",
+		"Cheddar": "1.00",
+		"Provolone": "1.00",
+		"American": "1.00",
+		"Swiss": "1.00",
+		"Pepperjack": "1.00"
+	};
 
-	return {
-		sandwich.addCheese = function(ingredient) {
-			console.log("add cheese run");
-			//get value of cheese drop down
-			//append text of corresponding value to "orderslip" div
-		}
-	}
+	sandwich.getCheeses = function() {
+		console.log("getCheeses run");
+		return Object.keys(cheeses);
+	};
+
+	sandwich.addCheese = function(ingredient) {
+		return "addCheese run";
+		//get value of cheese drop down
+		//append text of corresponding value to "orderslip" div
+	};
 
 	return sandwich;
 
 })(sandwich);
+
+
+
+menuBread.append($("<option>").attr('price',this.price).attr('value',this.val).text(this.text));
