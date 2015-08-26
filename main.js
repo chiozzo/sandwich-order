@@ -1,3 +1,10 @@
+var sandwich = (function() {
+
+
+})();
+
+
+
 var breads = [
   { val : "none", text : "None"},
   { val : "white", text : "White"},
@@ -9,7 +16,7 @@ var breads = [
 // var cheeses = ["Cheddar", "Swiss", "American", "Provolone", "Muenster"];
 // var veggies = [];
 
-var sel = $('<select>').appendTo('body');
+var sel = $('<select>').appendTo('#ingredients');
 sel.append("<option selected disabled>Choose Your Bread</option>");
 $(breads).each(function() {
  sel.append($("<option>").attr('value',this.val).text(this.text));
