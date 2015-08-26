@@ -1,29 +1,27 @@
-var sandwich = (function(){
+var sandwich = (function(sandwich){
 	var breads = {
-		"white": "0.50",
-		"wheat": "0.50",
-		"whole grain": "0.50",
-		"cheddar bread": "0.50",
-		"italian herb": "0.50",
-		"rye": "0.50",
-		"french": "0.50",
-		"sourdough": "0.50"
+		"White": "0.50",
+		"Wheat": "0.50",
+		"Whole Grain": "0.50",
+		"Cheddar": "0.50",
+		"Italian Herb": "0.50",
+		"Rye": "0.50",
+		"French": "0.50",
+		"Sourdough": "0.50"
 	};
 
-	return {
-	getBread: function() {
-		console.log("get bread run");
-		var breadsArray = Object.keys(breads);
-		return breadsArray;
-	},
-	addBread: function(ingredient) {
-		return "add bread run";
+	sandwich.getBreads = function() {
+		console.log("getBreads run");
+		return Object.keys(breads);
+	};
+
+	sandwich.addBread = function(ingredient) {
+		return "addBread run";
+
 		//get value of bread drop down
-		//append text of corresponding value to "orderslip" div
-		}
+		//append text of corresponding value to "created-order" div
 	};
 
-})();
+	return sandwich;
 
-var breadsArray = sandwich.getBread();
-console.log(breadsArray);
+})(sandwich);

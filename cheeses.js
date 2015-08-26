@@ -1,18 +1,23 @@
 var sandwich = (function(sandwich){
 	var cheeses = {
-		"muenster": "1.00",
-		"cheddar": "1.00",
-		"provolone": "1.00",
-		"american": "1.00",
-		"swiss": "1.00",
-		"pepperjack": "1.00"
+		"Muenster": "1.00",
+		"Cheddar": "1.00",
+		"Provolone": "1.00",
+		"American": "1.00",
+		"Swiss": "1.00",
+		"Pepperjack": "1.00"
+	};
+
+	sandwich.getCheeses = function() {
+		console.log("getCheeses run");
+		return Object.keys(cheeses);
 	};
 
 	sandwich.addCheese = function(ingredient) {
-		console.log("add cheese run");
+		return "addCheese run";
 		//get value of cheese drop down
 		//append text of corresponding value to "orderslip" div
-	}
+	};
 
 	return sandwich;
 

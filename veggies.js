@@ -1,17 +1,22 @@
 var sandwich = (function(sandwich){
 	var veggies = {
-		"lettuce": "0.25",
-		"tomato": "0.25",
-		"onion": "0.25",
-		"cucumber": "0.25",
-		"pickle": "0.25",
+		"Lettuce": "0.25",
+		"Tomato": "0.25",
+		"Onion": "0.25",
+		"Cucumber": "0.25",
+		"Pickle": "0.25"
 	};
 
-	sandwich.addVeggies = function(ingredient) {
-		console.log("add veggie run");
+	sandwich.getVeggies = function() {
+		console.log("getVeggies run");
+		return Object.keys(veggies);
+	};
+
+	sandwich.addVeggie = function(ingredient) {
+		return "addVeggie run";
 		//get value of veggie drop down
 		//append text of corresponding value to "orderslip" div
-	}
+	};
 
 	return sandwich;
 
