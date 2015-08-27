@@ -41,9 +41,27 @@ h3 {
   padding: 10px;
   /* The width property here is important. Explain why */
   width: 100px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 1px solid rgba(0,0,0,.2);
   height: 20em;
   color: orange;
   font-size: 2em;
   text-align: center;
 }
+
+/*.sidebar__right > div {
+  float: left;
+  margin: 5px;
+}
+
+#sandwich-build {
+  display: block;
+}*/
+
+
+
+
+
+
+
+
+
