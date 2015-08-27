@@ -21,9 +21,8 @@ var sandwich = (function(sandwich){
 		var selection = $("#breads").val();
 		console.log(selection);
 		//append value to #sandwich
-		$("#sandwich").append(selection);
-		$("#sandwich").append(breads[selection]);
-		return breads[selection];
+		$("#bread-type").append(selection);
+		$("#bread-price").append(breads[selection]);
 	};
 
 	return sandwich;

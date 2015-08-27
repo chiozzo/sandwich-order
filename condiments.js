@@ -11,10 +11,14 @@ var sandwich = (function(sandwich){
 		return Object.keys(condiments);
 	};
 
-	sandwich.addCondiment = function(ingredient) {
-		return "addCondiment run";
+	sandwich.addCondiment = function() {
 		//get value of condiment drop down
-		//append text of corresponding value to "orderslip" div
+		console.log("addCondiment run");
+		var selection = $("#condiments").val();
+		console.log(selection);
+		//append value to #sandwich
+		$("#condiment-type").append(selection);
+		$("#condiment-price").append(condiments[selection]);
 	};
 
 	return sandwich;
