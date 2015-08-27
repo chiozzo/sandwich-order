@@ -15,11 +15,15 @@ var sandwich = (function(sandwich){
 		return Object.keys(breads);
 	};
 
-	sandwich.addBread = function(ingredient) {
-		return "addBread run";
-
+	sandwich.addBread = function() {
 		//get value of bread drop down
-		//append text of corresponding value to "created-order" div
+		console.log("addBread run");
+		var selection = $("#breads").val();
+		console.log(selection);
+		//append value to #sandwich
+		$("#sandwich").append(selection);
+		$("#sandwich").append(breads[selection]);
+		return breads[selection];
 	};
 
 	return sandwich;
