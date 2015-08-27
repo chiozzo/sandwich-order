@@ -38,8 +38,22 @@ $(veggies).each(function() {
 });
 $("<button id='veggie-button'>Add Veggie</button>").appendTo("#veggie");
 
-$("#bread-button").on("click", sandwich.addBread);
-$("#cheese-button").on("click", sandwich.addCheese);
+$("#bread-button").click(function() {
+  var breadChosen = $("#breads").val();
+  var breadPrice = sandwich.addBread(breadChosen);
+  $("#bread-type").append(breadChosen);
+  $("#bread-price").append(breadPrice);
+  totalPrice += breadPrice;
+
+});
+
+$("#cheese-button").click(function() {
+  var cheeseChosen = $("#cheeses").val();
+  var cheesePrice = sandwich.addCheese(cheeseChosen);
+  $("#cheese-type").append(cheeseChosen);
+  $("#cheese-price").append(cheesePrice);
+  totalPrice += cheesePrice;
+});
 
 $("#condiment-button").click(function() {
   var condimentChosen = $("#condiments").val();
@@ -57,4 +71,10 @@ $("#meat-button").click(function() {
   totalPrice += meatPrice;
 });
 
-$("#veggie-button").on("click", sandwich.addVeggie);
+$("#veggie-button").click(function() {
+  var veggieChosen = $("#veggies").val();
+  var veggiePrice = sandwich.addVeggie(veggieChosen);
+  $("#veggie-type").append(veggieChosen);
+  $("#veggie-price").append(veggiePrice);
+  totalPrice += veggiePrice;
+});
