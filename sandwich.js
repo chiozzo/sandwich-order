@@ -1,3 +1,5 @@
+var totalPrice = 0;
+
 var breads = sandwich.getBreads();
 var cheeses = sandwich.getCheeses();
 var condiments = sandwich.getCondiments();
@@ -38,6 +40,21 @@ $("<button id='veggie-button'>Add Veggie</button>").appendTo("#veggie");
 
 $("#bread-button").on("click", sandwich.addBread);
 $("#cheese-button").on("click", sandwich.addCheese);
-$("#condiment-button").on("click", sandwich.addCondiment);
-$("#meat-button").on("click", sandwich.addMeat);
+
+$("#condiment-button").click(function() {
+  var condimentChosen = $("#condiments").val();
+  var condimentPrice = sandwich.addCondiment(condimentChosen);
+  $("#condiment-type").append(condimentChosen);
+  $("#condiment-price").append(condimentPrice);
+  totalPrice += condimentPrice;
+});
+
+$("#meat-button").click(function() {
+  var meatChosen = $("#meats").val();
+  var meatPrice = sandwich.addMeat(meatChosen);
+  $("#meat-type").append(meatChosen);
+  $("#meat-price").append(meatPrice);
+  totalPrice += meatPrice;
+});
+
 $("#veggie-button").on("click", sandwich.addVeggie);

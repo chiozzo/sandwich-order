@@ -1,11 +1,11 @@
 var sandwich = (function(sandwich){
 	var meats = {
-		"Ham": "2.00",
-		"Turkey": "2.00",
-		"Chicken": "2.00",
-		"Meatballs": "2.00",
-		"Salami": "2.00",
-		"Bacon": "2.00"
+		"Ham": 2.00,
+		"Turkey": 2.00,
+		"Chicken": 2.00,
+		"Meatballs": 2.00,
+		"Salami": 2.00,
+		"Bacon": 2.00
 	};
 
 	sandwich.getMeats = function() {
@@ -13,13 +13,8 @@ var sandwich = (function(sandwich){
 		return Object.keys(meats);
 	};
 
-	sandwich.addMeat = function () {
-		//get value of meat drop down
-		console.log("addMeat run");
-		var selection = $("#meats").val();
-		console.log(selection);
-		//append value to #sandwich
-
+	sandwich.addMeat = function (meatChosen) {
+		return meats[meatChosen];
 	};
 
 	return sandwich;

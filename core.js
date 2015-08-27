@@ -2,9 +2,9 @@ document.ready
 
   var finalPrice = 0;
 
-  $("#cheese-button").click(function() {
-    var meatChosen = $("#cheese-select").val();
-    var meatPrice = sandwich.getMeat(meatChosen);
+  $("#meat-button").click(function() {
+    var meatChosen = $("#meats").val();
+    var meatPrice = sandwich.addMeat(meatChosen);
 
     $("#meat-type").append(meatChosen);
     $("#meat-price").append(meatPrice);
