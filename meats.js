@@ -19,8 +19,7 @@ var sandwich = (function(sandwich){
 		var selection = $("#meats").val();
 		console.log(selection);
 		//append value to #sandwich
-		$("#meat-type").append(selection);
-		$("#meat-price").append(meats[selection]);
+
 	};
 
 	return sandwich;
