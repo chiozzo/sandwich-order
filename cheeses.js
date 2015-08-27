@@ -13,10 +13,14 @@ var sandwich = (function(sandwich){
 		return Object.keys(cheeses);
 	};
 
-	sandwich.addCheese = function(ingredient) {
-		return "addCheese run";
+	sandwich.addCheese = function() {
 		//get value of cheese drop down
-		//append text of corresponding value to "orderslip" div
+		console.log("addCheese run");
+		var selection = $("#cheeses").val();
+		console.log(selection);
+		//append value to #sandwich
+		$("#cheese-type").append(selection);
+		$("#cheese-price").append(cheeses[selection]);
 	};
 
 	return sandwich;
