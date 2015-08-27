@@ -37,7 +37,7 @@ $(veggies).each(function() {
 $("<button id='veggie-button'>Add Veggie</button>").appendTo("#veggie");
 
 $("#bread-button").on("click", sandwich.addBread);
-$("#meat-button").on("click", sandwich.addCheese);
+$("#cheese-button").on("click", sandwich.addCheese);
 $("#condiment-button").on("click", sandwich.addCondiment);
 $("#meat-button").on("click", sandwich.addMeat);
 $("#veggie-button").on("click", sandwich.addVeggie);
