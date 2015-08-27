@@ -45,8 +45,8 @@ $("<button id='veggie-button'>Add Veggie</button>").appendTo("#veggie");
 $("#bread-button").click(function() {
   var breadChosen = $("#breads").val();
   var breadPrice = sandwich.addBread(breadChosen);
-  $("#bread-type").append(breadChosen);
-  $("#bread-price").append(breadPrice);
+  $("#bread-type").append("<p>Bread: " + breadChosen + "</p>");
+  // $("#bread-price").append(breadPrice);
   totalPrice += breadPrice;
 
 });
@@ -54,8 +54,8 @@ $("#bread-button").click(function() {
 $("#cheese-button").click(function() {
   var cheeseChosen = $("#cheeses").val();
   var cheesePrice = sandwich.addCheese(cheeseChosen);
-  $("#cheese-type").append(cheeseChosen);
-  $("#cheese-price").append(cheesePrice);
+  $("#cheese-type").append("<p>Cheese: " + cheeseChosen + "</p>");
+  // $("#cheese-price").append(cheesePrice);
   totalPrice += cheesePrice;
 });
 
@@ -63,24 +63,24 @@ $("#cheese-button").click(function() {
 $("#condiment-button").click(function() {
   var condimentChosen = $("#condiments").val();
   var condimentPrice = sandwich.addCondiment(condimentChosen);
-  $("#condiment-type").append(condimentChosen);
-  $("#condiment-price").append(condimentPrice);
+  $("#condiment-type").append("<p>Condiment: " + condimentChosen + "</p>");
+  // $("#condiment-price").append(condimentPrice);
   totalPrice += condimentPrice;
 });
 
 $("#meat-button").click(function() {
   var meatChosen = $("#meats").val();
   var meatPrice = sandwich.addMeat(meatChosen);
-  $("#meat-type").append(meatChosen);
-  $("#meat-price").append(meatPrice);
+  $("#meat-type").append("<p>Meat: " + meatChosen + "</p>");
+  // $("#meat-price").append(meatPrice);
   totalPrice += meatPrice;
 });
 
 $("#veggie-button").click(function() {
   var veggieChosen = $("#veggies").val();
   var veggiePrice = sandwich.addVeggie(veggieChosen);
-  $("#veggie-type").append(veggieChosen);
-  $("#veggie-price").append(veggiePrice);
+  $("#veggie-type").append("<p>Veggie: " + veggieChosen + "</p>");
+  // $("#veggie-price").append(veggiePrice);
   totalPrice += veggiePrice;
 });
 
