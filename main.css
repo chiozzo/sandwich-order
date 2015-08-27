@@ -12,7 +12,7 @@ h3 {
   padding: 0;
   margin: 0;
   list-style: none;
-  /*height: 50em;*/
+  height: 100%;
   display: flex;
   -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -26,6 +26,19 @@ h3 {
   font-family: Satisfy;
   font-weight: 100;
   text-shadow: 2px 2px 3px black;
+}
+
+.flex-container > footer {
+  color: orange;
+  flex: 1 100%;
+  height: 3em;
+  background: gray;
+  font-family: Satisfy;
+  font-size: 1.25em;
+  font-weight: 100;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+  line-height: 3em;
 }
 
 .sidebar__left {
@@ -42,7 +55,6 @@ h3 {
   /* The width property here is important. Explain why */
   width: 100px;
   border: 1px solid rgba(0,0,0,.2);
-  height: 20em;
   color: orange;
   font-size: 2em;
   text-align: center;
