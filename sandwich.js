@@ -17,21 +17,25 @@ $(breads).each(function() {
   menuBread.append($("<option>").attr('value',this).text(this));
 });
 $("<button id='bread-button'>Add Bread</button>").appendTo("#bread");
+
 menuCheese.append("<option selected disabled>Choose Your Cheese</option>");
 $(cheeses).each(function() {
   menuCheese.append($("<option>").attr('value',this).text(this));
 });
 $("<button id='cheese-button'>Add Cheese</button>").appendTo("#cheese");
+
 menuCondiment.append("<option selected disabled>Choose Your Condiment</option>");
 $(condiments).each(function() {
   menuCondiment.append($("<option>").attr('value',this).text(this));
 });
 $("<button id='condiment-button'>Add Condiment</button>").appendTo("#condiment");
+
 menuMeat.append("<option selected disabled>Choose Your Meat</option>");
 $(meats).each(function() {
   menuMeat.append($("<option>").attr('value',this).text(this));
 });
 $("<button id='meat-button'>Add Meat</button>").appendTo("#meat");
+
 menuVeggie.append("<option selected disabled>Choose Your Veggie</option>");
 $(veggies).each(function() {
   menuVeggie.append($("<option>").attr('value',this).text(this));
@@ -54,6 +58,7 @@ $("#cheese-button").click(function() {
   $("#cheese-price").append(cheesePrice);
   totalPrice += cheesePrice;
 });
+
 
 $("#condiment-button").click(function() {
   var condimentChosen = $("#condiments").val();
@@ -78,3 +83,22 @@ $("#veggie-button").click(function() {
   $("#veggie-price").append(veggiePrice);
   totalPrice += veggiePrice;
 });
+
+
+
+$("#sandwich-build").click(function() {
+  $("<span>Your Total Cost is $" + totalPrice + "</span>").appendTo("#total");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
