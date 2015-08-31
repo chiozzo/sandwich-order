@@ -64,7 +64,7 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
   //CHEESE BUTTON
   $("#cheese-button").click(function() {
     var cheeseChosen = $("#cheeses").val();
-    var cheesePrice = sandwich.addCheese(cheeseChosen);
+    var cheesePrice = cheeses.addCheese(cheeseChosen);
     $("#cheese-type").append("<p>Cheese: " + cheeseChosen + "</p>");
     // $("#cheese-price").append(cheesePrice);
     totalPrice += cheesePrice;
@@ -73,7 +73,7 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
   //CONDIMENT BUTTON
   $("#condiment-button").click(function() {
     var condimentChosen = $("#condiments").val();
-    var condimentPrice = sandwich.addCondiment(condimentChosen);
+    var condimentPrice = condiments.addCondiment(condimentChosen);
     $("#condiment-type").append("<p>Condiment: " + condimentChosen + "</p>");
     // $("#condiment-price").append(condimentPrice);
     totalPrice += condimentPrice;
@@ -82,7 +82,7 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
   //MEAT BUTTON
   $("#meat-button").click(function() {
     var meatChosen = $("#meats").val();
-    var meatPrice = sandwich.addMeat(meatChosen);
+    var meatPrice = meats.addMeat(meatChosen);
     $("#meat-type").append("<p>Meat: " + meatChosen + "</p>");
     // $("#meat-price").append(meatPrice);
     totalPrice += meatPrice;
@@ -91,7 +91,7 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
   //VEGGIE BUTTON
   $("#veggie-button").click(function() {
     var veggieChosen = $("#veggies").val();
-    var veggiePrice = sandwich.addVeggie(veggieChosen);
+    var veggiePrice = veggies.addVeggie(veggieChosen);
     $("#veggie-type").append("<p>Veggie: " + veggieChosen + "</p>");
     // $("#veggie-price").append(veggiePrice);
     totalPrice += veggiePrice;
