@@ -1,0 +1,3 @@
+var sandwich = (function() {
+	return {};
+});
