@@ -9,15 +9,14 @@ define([], function(meats){
 		"Bacon": 2.00
 	};
 
-	meats.getMeats = function() {
-		console.log("getMeats run");
-		return Object.keys(meats);
+	return {
+		getMeats : function() {
+			console.log("getMeats run");
+			return Object.keys(meats);
+		},
+
+		addMeat : function (meatChosen) {
+			return meats[meatChosen];
+		}
 	};
-
-	meats.addMeat = function (meatChosen) {
-		return meats[meatChosen];
-	};
-
-	return meats;
-
 });

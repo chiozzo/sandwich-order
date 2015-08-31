@@ -10,15 +10,13 @@ define([], function(breads){
 		"Sourdough": 0.50
 	};
 
-
-	breads.getBreads = function() {
+	return {
+		getBreads : function() {
 		console.log("getBreads run");
-		return Object.keys(breads);
+			return Object.keys(breads);
+		},
+		addBread : function(breadChosen) {
+			return breads[breadChosen];
+		}
 	};
-
-	breads.addBread = function(breadChosen) {
-		return breads[breadChosen];
-	};
-
-	return breads;
 });

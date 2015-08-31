@@ -9,15 +9,14 @@ define([], function(cheeses){
 		"Pepperjack": 1.00
 	};
 
-	cheeses.getCheeses = function() {
-		console.log("getCheeses run");
-		return Object.keys(cheeses);
+	return {
+		getCheeses: function() {
+			console.log("getCheeses run");
+			return Object.keys(cheeses);
+		},
+
+		addCheese : function(cheeseChosen) {
+			return cheeses[cheeseChosen];
+		}
 	};
-
-	cheeses.addCheese = function(cheeseChosen) {
-		return cheeses[cheeseChosen];
-	};
-
-	return cheeses;
-
 });

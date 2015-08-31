@@ -8,15 +8,14 @@ define([], function(veggies){
 		"Pickle": 0.25
 	};
 
-	veggies.getVeggies = function() {
-		console.log("getVeggies run");
-		return Object.keys(veggies);
+	return {
+		getVeggies : function() {
+			console.log("getVeggies run");
+			return Object.keys(veggies);
+		},
+
+		addVeggie : function(veggieChosen) {
+			return veggies[veggieChosen];
+		}
 	};
-
-	veggies.addVeggie = function(veggieChosen) {
-		return veggies[veggieChosen];
-	};
-
-	return veggies;
-
 });

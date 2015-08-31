@@ -7,15 +7,14 @@ define([], function(condiments){
 		"Ranch": 0.50
 	};
 
-	condiments.getCondiments = function() {
-		console.log("getCondiments run");
-		return Object.keys(condiments);
+	return {
+		getCondiments : function() {
+			console.log("getCondiments run");
+			return Object.keys(condiments);
+		},
+
+		addCondiment : function(condimentChosen) {
+			return condiments[condimentChosen];
+		}
 	};
-
-	condiments.addCondiment = function(condimentChosen) {
-		return condiments[condimentChosen];
-	};
-
-	return condiments;
-
 });

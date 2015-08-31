@@ -4,11 +4,11 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
 
   var sandwich = {};
   var totalPrice = 0;
-  var breads = breads.getBreads();
-  var cheeses = cheeses.getCheeses();
-  var condiments = condiments.getCondiments();
-  var meats = meats.getMeats();
-  var veggies = veggies.getVeggies();
+  var breadsArray = breads.getBreads();
+  var cheesesArray = cheeses.getCheeses();
+  var condimentsArray = condiments.getCondiments();
+  var meatsArray = meats.getMeats();
+  var veggiesArray = veggies.getVeggies();
 
   var menuBread = $('<select id="breads">').appendTo('#bread');
   var menuCheese = $('<select id="cheeses">').appendTo('#cheese');
@@ -18,35 +18,35 @@ define(["jquery", "breads", "veggies", "meats", "cheeses", "condiments"], functi
 
   //create select menu in the dom and add Button BREAD
   menuBread.append("<option selected disabled>Choose Your Bread</option>");
-  $(breads).each(function() {
+  $(breadsArray).each(function() {
     menuBread.append($("<option>").attr('value',this).text(this));
   });
   $("<button id='bread-button'>Add Bread</button>").appendTo("#bread");
 
   //CHEESE
   menuCheese.append("<option selected disabled>Choose Your Cheese</option>");
-  $(cheeses).each(function() {
+  $(cheesesArray).each(function() {
     menuCheese.append($("<option>").attr('value',this).text(this));
   });
   $("<button id='cheese-button'>Add Cheese</button>").appendTo("#cheese");
 
   //CONDIMENT
   menuCondiment.append("<option selected disabled>Choose Your Condiment</option>");
-  $(condiments).each(function() {
+  $(condimentsArray).each(function() {
     menuCondiment.append($("<option>").attr('value',this).text(this));
   });
   $("<button id='condiment-button'>Add Condiment</button>").appendTo("#condiment");
 
   //MEAT
   menuMeat.append("<option selected disabled>Choose Your Meat</option>");
-  $(meats).each(function() {
+  $(meatsArray).each(function() {
     menuMeat.append($("<option>").attr('value',this).text(this));
   });
   $("<button id='meat-button'>Add Meat</button>").appendTo("#meat");
 
   //VEGGIE
   menuVeggie.append("<option selected disabled>Choose Your Veggie</option>");
-  $(veggies).each(function() {
+  $(veggiesArray).each(function() {
     menuVeggie.append($("<option>").attr('value',this).text(this));
   });
   $("<button id='veggie-button'>Add Veggie</button>").appendTo("#veggie");
