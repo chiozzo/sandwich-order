@@ -1,4 +1,4 @@
-var sandwich = (function(sandwich){
+define([], function(breads){
 	var breads = {
 		"White": 0.50,
 		"Wheat": 0.50,
@@ -10,15 +10,15 @@ var sandwich = (function(sandwich){
 		"Sourdough": 0.50
 	};
 
-	sandwich.getBreads = function() {
+
+	breads.getBreads = function() {
 		console.log("getBreads run");
 		return Object.keys(breads);
 	};
 
-	sandwich.addBread = function(breadChosen) {
+	breads.addBread = function(breadChosen) {
 		return breads[breadChosen];
 	};
 
-	return sandwich;
-
-})(sandwich);
+	return breads;
+});

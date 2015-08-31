@@ -1,4 +1,5 @@
-var sandwich = (function(sandwich){
+define([], function(condiments){
+
 	var condiments = {
 		"Oil": 0.50,
 		"Vinegar": 0.50,
@@ -6,15 +7,15 @@ var sandwich = (function(sandwich){
 		"Ranch": 0.50
 	};
 
-	sandwich.getCondiments = function() {
+	condiments.getCondiments = function() {
 		console.log("getCondiments run");
 		return Object.keys(condiments);
 	};
 
-	sandwich.addCondiment = function(condimentChosen) {
+	condiments.addCondiment = function(condimentChosen) {
 		return condiments[condimentChosen];
 	};
 
-	return sandwich;
+	return condiments;
 
-})(sandwich);
+});

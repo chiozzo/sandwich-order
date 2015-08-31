@@ -1,4 +1,5 @@
-var sandwich = (function(sandwich){
+define([], function(cheeses){
+
 	var cheeses = {
 		"Muenster": 1.00,
 		"Cheddar": 1.00,
@@ -8,15 +9,15 @@ var sandwich = (function(sandwich){
 		"Pepperjack": 1.00
 	};
 
-	sandwich.getCheeses = function() {
+	cheeses.getCheeses = function() {
 		console.log("getCheeses run");
 		return Object.keys(cheeses);
 	};
 
-	sandwich.addCheese = function(cheeseChosen) {
+	cheeses.addCheese = function(cheeseChosen) {
 		return cheeses[cheeseChosen];
 	};
 
-	return sandwich;
+	return cheeses;
 
-})(sandwich);
+});
